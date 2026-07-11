@@ -1,65 +1,190 @@
+import Link from "next/link";
 import Image from "next/image";
+import Nav from "@/components/Nav";
+import Footer from "@/components/Footer";
+
+const systems = [
+  {
+    code: "SYS.ORD",
+    title: "Ordering & fulfillment",
+    description:
+      "Pre-order and payment systems for offices, campuses, and vendors — no more tracking orders by word of mouth.",
+    proof: "Built as LunchOS — live, multi-tenant, processing real payments.",
+  },
+  {
+    code: "SYS.MEM",
+    title: "Membership & fee management",
+    description:
+      "Registration, fees, and performance tracking for schools, gyms, and training institutes.",
+    proof: "Built as Prime Klazroom and PrimeFit — both fully working.",
+  },
+  {
+    code: "SYS.POS",
+    title: "Point of sale",
+    description:
+      "Inventory, shifts, and payments for retail and service businesses.",
+    proof: "Built as PrimePOS — in active development.",
+  },
+];
 
 export default function Home() {
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
+    <main className="bg-canvas text-ink">
+      <Nav />
+
+      <section className="mx-auto max-w-6xl px-6 pt-20 pb-24 md:px-10 md:pt-28 md:pb-32">
+        <p className="animate-fade-up font-mono text-xs tracking-[0.2em] uppercase text-accent">
+          Software studio — Accra, Ghana
+        </p>
+        <h1
+          className="animate-fade-up mt-6 max-w-3xl font-display text-5xl leading-[1.1] font-semibold tracking-tight md:text-7xl"
+          style={{ animationDelay: "80ms" }}
+        >
+          The systems Ghanaian businesses{" "}
+          <span className="italic font-medium pb-1">actually</span> run on.
+        </h1>
+        <p
+          className="animate-fade-up mt-6 max-w-xl text-lg text-ink-muted leading-relaxed"
+          style={{ animationDelay: "160ms" }}
+        >
+          I design and build ordering, membership, and operations software
+          for institutions and businesses across Ghana — proven in
+          production, ready to adapt to yours.
+        </p>
+        <div
+          className="animate-fade-up mt-10 flex flex-wrap gap-4"
+          style={{ animationDelay: "240ms" }}
+        >
+          <Link
+            href="/contact"
+            className="rounded-full bg-accent px-6 py-3 text-sm font-medium text-canvas hover:bg-accent-deep transition-colors"
+          >
+            Start a project →
+          </Link>
+          <Link
+            href="/case-studies"
+            className="rounded-full border border-line px-6 py-3 text-sm font-medium hover:border-line-strong transition-colors"
+          >
+            View case studies
+          </Link>
+        </div>
+      </section>
+
+      <section className="border-t border-line">
+        <div className="mx-auto max-w-6xl px-6 py-24 md:px-10">
+          <h2 className="font-display text-3xl font-semibold md:text-5xl">
+            The <span className="italic font-medium">systems</span>
+          </h2>
+          <div className="mt-12 grid gap-px overflow-hidden rounded-2xl border border-line md:grid-cols-3">
+            {systems.map((system) => (
+              <div
+                key={system.code}
+                className="bg-surface p-8 flex flex-col gap-4"
+              >
+                <span className="font-mono text-xs tracking-[0.15em] text-accent">
+                  {system.code}
+                </span>
+                <h3 className="font-display text-xl font-medium">
+                  {system.title}
+                </h3>
+                <p className="text-sm text-ink-muted leading-relaxed">
+                  {system.description}
+                </p>
+                <p className="mt-auto pt-4 border-t border-line text-xs text-ink-muted">
+                  {system.proof}
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="border-t border-line">
+        <div className="mx-auto max-w-6xl px-6 py-24 md:px-10">
+          <h2 className="font-display text-3xl font-semibold md:text-5xl">
+            Proven, <span className="italic font-medium">not</span> promised
+          </h2>
+          <div className="mt-12 grid gap-6 md:grid-cols-2">
+            <Link
+              href="/case-studies/fpmi"
+              className="group overflow-hidden rounded-2xl border border-line bg-surface transition-colors hover:border-line-strong"
             >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
+              <div className="relative aspect-[16/10] w-full border-b border-line">
+                <Image
+                  src="/screenshots/fpmi-homepage.webp"
+                  alt="Flash Prime Media Institute website"
+                  fill
+                  className="object-cover object-top transition-transform duration-500 group-hover:scale-[1.02]"
+                  sizes="(min-width: 768px) 550px, 100vw"
+                />
+              </div>
+              <div className="p-8">
+                <span className="font-mono text-xs tracking-[0.15em] text-accent">
+                  LIVE CLIENT
+                </span>
+                <h3 className="mt-4 font-display text-2xl font-medium">
+                  Flash Prime Media Institute
+                </h3>
+                <p className="mt-3 text-sm text-ink-muted leading-relaxed">
+                  A public website and full admin system — admissions, fees,
+                  hostel management — built and shipped in six weeks. Live
+                  today, running the school&apos;s daily operations.
+                </p>
+              </div>
+            </Link>
+
+            <Link
+              href="/case-studies/lunchos"
+              className="group overflow-hidden rounded-2xl border border-line bg-surface transition-colors hover:border-line-strong"
             >
-              Learning
-            </a>{" "}
-            center.
+              <div className="relative aspect-[16/10] w-full border-b border-line">
+                <Image
+                  src="/screenshots/lunchos-landing.webp"
+                  alt="LunchOS landing page"
+                  fill
+                  className="object-cover object-top transition-transform duration-500 group-hover:scale-[1.02]"
+                  sizes="(min-width: 768px) 550px, 100vw"
+                />
+              </div>
+              <div className="p-8">
+                <span className="font-mono text-xs tracking-[0.15em] text-accent">
+                  READY TO DEPLOY
+                </span>
+                <h3 className="mt-4 font-display text-2xl font-medium">
+                  LunchOS
+                </h3>
+                <p className="mt-3 text-sm text-ink-muted leading-relaxed">
+                  A multi-tenant ordering platform built with Denis Gidisu —
+                  live on its own domain, with real payments and email
+                  infrastructure already in place. Ready to adapt for your
+                  office or vendor operation.
+                </p>
+              </div>
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      <section className="border-t border-line">
+        <div className="mx-auto max-w-6xl px-6 py-24 md:px-10">
+          <h2 className="font-display text-3xl font-semibold md:text-5xl">
+            Still running this on{" "}
+            <span className="italic font-medium">paper</span>?
+          </h2>
+          <p className="mt-4 max-w-xl text-ink-muted">
+            Tell me what you&apos;re managing manually — I&apos;ll show you
+            what it could look like as a real system.
           </p>
-        </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
+          <Link
+            href="/contact"
+            className="mt-8 inline-block rounded-full bg-accent px-6 py-3 text-sm font-medium text-canvas hover:bg-accent-deep transition-colors"
           >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
+            Start a project →
+          </Link>
         </div>
-      </main>
-    </div>
+      </section>
+
+      <Footer />
+    </main>
   );
 }
