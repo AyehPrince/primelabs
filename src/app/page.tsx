@@ -19,6 +19,13 @@ const systems = [
     proof: "Built as Prime Klazroom and PrimeFit — both fully working.",
   },
   {
+    code: "SYS.MKT",
+    title: "Marketplace & discovery",
+    description:
+      "Two-sided listing platforms — search, discovery, and direct contact between buyers and sellers.",
+    proof: "Built as p3dan — live on web and native Android.",
+  },
+  {
     code: "SYS.POS",
     title: "Point of sale",
     description:
@@ -75,7 +82,7 @@ export default function Home() {
           <h2 className="font-display text-3xl font-semibold md:text-5xl">
             The <span className="italic font-medium">systems</span>
           </h2>
-          <div className="mt-12 grid gap-px overflow-hidden rounded-2xl border border-line md:grid-cols-3">
+          <div className="mt-12 grid gap-px overflow-hidden rounded-2xl border border-line md:grid-cols-2">
             {systems.map((system) => (
               <div
                 key={system.code}
@@ -104,7 +111,7 @@ export default function Home() {
           <h2 className="font-display text-3xl font-semibold md:text-5xl">
             Proven, <span className="italic font-medium">not</span> promised
           </h2>
-          <div className="mt-12 grid gap-6 md:grid-cols-2">
+          <div className="mt-12 grid gap-6 md:grid-cols-3">
             <Link
               href="/case-studies/fpmi"
               className="group overflow-hidden rounded-2xl border border-line bg-surface transition-colors hover:border-line-strong"
@@ -115,20 +122,46 @@ export default function Home() {
                   alt="Flash Prime Media Institute website"
                   fill
                   className="object-cover object-top transition-transform duration-500 group-hover:scale-[1.02]"
-                  sizes="(min-width: 768px) 550px, 100vw"
+                  sizes="(min-width: 768px) 380px, 100vw"
                 />
               </div>
-              <div className="p-8">
+              <div className="p-6">
                 <span className="font-mono text-xs tracking-[0.15em] text-accent">
                   LIVE CLIENT
                 </span>
-                <h3 className="mt-4 font-display text-2xl font-medium">
+                <h3 className="mt-3 font-display text-xl font-medium">
                   Flash Prime Media Institute
                 </h3>
-                <p className="mt-3 text-sm text-ink-muted leading-relaxed">
-                  A public website and full admin system — admissions, fees,
-                  hostel management — built and shipped in six weeks. Live
-                  today, running the school&apos;s daily operations.
+                <p className="mt-2 text-sm text-ink-muted leading-relaxed">
+                  Full admissions, fee, and hostel management system — built
+                  and shipped in six weeks.
+                </p>
+              </div>
+            </Link>
+
+            <Link
+              href="/case-studies/p3dan"
+              className="group overflow-hidden rounded-2xl border border-line bg-surface transition-colors hover:border-line-strong"
+            >
+              <div className="relative aspect-[16/10] w-full border-b border-line">
+                <Image
+                  src="/screenshots/p3dan-landing-mobile.webp"
+                  alt="p3dan rental discovery platform"
+                  fill
+                  className="object-cover object-top transition-transform duration-500 group-hover:scale-[1.02]"
+                  sizes="(min-width: 768px) 380px, 100vw"
+                />
+              </div>
+              <div className="p-6">
+                <span className="font-mono text-xs tracking-[0.15em] text-accent">
+                  LIVE — WEB &amp; ANDROID
+                </span>
+                <h3 className="mt-3 font-display text-xl font-medium">
+                  p3dan
+                </h3>
+                <p className="mt-2 text-sm text-ink-muted leading-relaxed">
+                  A rental discovery platform for Ghana, live on two
+                  platforms with a security-audited admin system.
                 </p>
               </div>
             </Link>
@@ -143,21 +176,19 @@ export default function Home() {
                   alt="LunchOS landing page"
                   fill
                   className="object-cover object-top transition-transform duration-500 group-hover:scale-[1.02]"
-                  sizes="(min-width: 768px) 550px, 100vw"
+                  sizes="(min-width: 768px) 380px, 100vw"
                 />
               </div>
-              <div className="p-8">
+              <div className="p-6">
                 <span className="font-mono text-xs tracking-[0.15em] text-accent">
                   READY TO DEPLOY
                 </span>
-                <h3 className="mt-4 font-display text-2xl font-medium">
+                <h3 className="mt-3 font-display text-xl font-medium">
                   LunchOS
                 </h3>
-                <p className="mt-3 text-sm text-ink-muted leading-relaxed">
-                  A multi-tenant ordering platform built with Denis Gidisu —
-                  live on its own domain, with real payments and email
-                  infrastructure already in place. Ready to adapt for your
-                  office or vendor operation.
+                <p className="mt-2 text-sm text-ink-muted leading-relaxed">
+                  Multi-tenant ordering platform, live with real payments —
+                  ready to adapt for your operation.
                 </p>
               </div>
             </Link>

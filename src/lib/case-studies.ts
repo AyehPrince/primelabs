@@ -90,6 +90,39 @@ export const caseStudies: CaseStudy[] = [
     ],
   },
   {
+    slug: "p3dan",
+    tag: "Flagship",
+    status: "Live",
+    title: "p3dan",
+    oneLiner:
+      "A rental discovery platform for Ghana's housing market — live on web and native Android.",
+    problem:
+      "Ghana's rental market runs largely on word-of-mouth and agent networks, with inconsistent fee structures, no centralized listings, and frequent mismatches between what's advertised and what's actually available.",
+    build:
+      "p3dan lets landlords list properties directly, filterable by real local room types — single room, chamber and hall, self-contain, and more — and searchable by area via live Google Places integration covering all of Ghana, not a fixed list. Every listing shows transparent pricing, lease terms, and payment structure upfront, with contact happening directly between seeker and landlord via WhatsApp — no agent middleman fees. Every listing is manually reviewed before going live, backed by a verified-badge system, a trusted-landlord designation, and a reporting and moderation pipeline, all managed through a purpose-built admin panel with real-time analytics.",
+    proof:
+      "Built as a React Native / Expo mobile app distributed via EAS Build, alongside a Next.js web platform on Vercel, sharing one Supabase backend (Postgres, Auth, Storage) with Row Level Security enforcing every permission boundary — including an admin role system that underwent a real security audit, catching and fixing two privilege-escalation vulnerabilities before launch.",
+    result:
+      "Live on both platforms as of July 2026, with a working end-to-end pipeline from listing creation through moderation, discovery, and direct contact.",
+    screenshots: [
+      {
+        src: "/screenshots/p3dan-landing-mobile.webp",
+        alt: "p3dan public website homepage with mobile map view",
+        label: "Public website + mobile map",
+      },
+      {
+        src: "/screenshots/p3dan-listings-mobile.webp",
+        alt: "p3dan listings browse page with mobile listings view",
+        label: "Listings + mobile view",
+      },
+      {
+        src: "/screenshots/p3dan-admin-mobile.webp",
+        alt: "p3dan admin dashboard with mobile home screen",
+        label: "Admin dashboard + mobile app",
+      },
+    ],
+  },
+  {
     slug: "primefit",
     tag: "Supporting",
     status: "Demo-able on request",
