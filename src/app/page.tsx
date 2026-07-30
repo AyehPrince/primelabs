@@ -30,7 +30,7 @@ const systems = [
     title: "Point of sale",
     description:
       "Inventory, shifts, and payments for retail and service businesses.",
-    proof: "Built as PrimePOS — in active development.",
+    proof: "Built as PrimePOS — live, with a full onboarding wizard and analytics.",
   },
 ];
 

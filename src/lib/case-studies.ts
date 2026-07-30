@@ -123,6 +123,39 @@ export const caseStudies: CaseStudy[] = [
     ],
   },
   {
+    slug: "primepos",
+    tag: "Flagship",
+    status: "Live",
+    title: "PrimePOS",
+    oneLiner:
+      "A multi-tenant point-of-sale system with a guided setup wizard, live analytics, and shift management.",
+    problem:
+      "Retail shops, salons, and service businesses running sales manually or on disconnected tools — no unified way to track inventory, staff shifts, tax, or daily revenue in one place.",
+    build:
+      "A complete point-of-sale platform: a guided onboarding wizard that sets up a business's logo, currency, tax/VAT rate, and payment methods in minutes; a fast POS terminal with category filtering and cart management; shift management with opening floats and per-shift order tracking; and a full analytics dashboard covering revenue trends, tax collected, payment method breakdown, and top products by revenue.",
+    proof:
+      "Rebuilt as a Next.js monolith for simpler deployment, live at primelabs-pos.vercel.app — a fully working multi-tenant system, not a demo account.",
+    result:
+      "Live and ready to onboard a real business — the full flow, from business setup to daily reporting, already works end to end.",
+    screenshots: [
+      {
+        src: "/screenshots/primepos-onboarding.webp",
+        alt: "PrimePOS business onboarding wizard",
+        label: "Setup wizard",
+      },
+      {
+        src: "/screenshots/primepos-terminal.webp",
+        alt: "PrimePOS point-of-sale terminal screen",
+        label: "POS terminal",
+      },
+      {
+        src: "/screenshots/primepos-reports.webp",
+        alt: "PrimePOS analytics and reports dashboard",
+        label: "Analytics",
+      },
+    ],
+  },
+  {
     slug: "primefit",
     tag: "Supporting",
     status: "Demo-able on request",
