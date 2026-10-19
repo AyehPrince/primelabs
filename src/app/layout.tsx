@@ -1,30 +1,37 @@
 import type { Metadata } from "next";
-import { Playfair_Display, Archivo, Space_Mono } from "next/font/google";
+import {
+  Bricolage_Grotesque,
+  Instrument_Sans,
+  IBM_Plex_Mono,
+} from "next/font/google";
 import "./globals.css";
 
-const playfairDisplay = Playfair_Display({
+const bricolage = Bricolage_Grotesque({
   subsets: ["latin"],
   variable: "--font-display",
-  style: ["normal", "italic"],
-  weight: ["500", "600", "700", "800", "900"],
 });
 
-const archivo = Archivo({
+const instrument = Instrument_Sans({
   subsets: ["latin"],
   variable: "--font-body",
-  weight: ["400", "500", "600"],
 });
 
-const spaceMono = Space_Mono({
+const plexMono = IBM_Plex_Mono({
   subsets: ["latin"],
   variable: "--font-mono",
-  weight: ["400", "700"],
+  weight: ["400", "500"],
 });
 
 export const metadata: Metadata = {
-  title: "PrimeLabs — Software studio, Accra",
+  title: "PrimeLabsAfrica — Software studio, Accra",
   description:
-    "PrimeLabs designs and builds the ordering, membership, and operations software Ghanaian businesses and institutions run on.",
+    "PrimeLabsAfrica designs and builds the ordering, membership, marketplace and operations software that Ghanaian businesses and institutions run on, with Africa next.",
+  openGraph: {
+    title: "PrimeLabsAfrica — Software studio, Accra",
+    description:
+      "Production software for Ghana's businesses and institutions, built in Accra for Africa.",
+    type: "website",
+  },
 };
 
 export default function RootLayout({
@@ -33,7 +40,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${playfairDisplay.variable} ${archivo.variable} ${spaceMono.variable}`}
+      className={`${bricolage.variable} ${instrument.variable} ${plexMono.variable}`}
     >
       <body>{children}</body>
     </html>

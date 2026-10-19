@@ -1,18 +1,19 @@
 @import "tailwindcss";
 
 @theme inline {
-  --color-canvas: #110d0a;
-  --color-surface: #1a1512;
-  --color-surface-2: #221b16;
-  --color-ink: #f3ede4;
-  --color-ink-muted: #a69a8c;
-  --color-accent: #d97a46;
-  --color-accent-deep: #a85527;
-  --color-line: #f3ede41a;
-  --color-line-strong: #f3ede42e;
-  --color-line-accent: #d97a4659;
+  --color-canvas: #f7f6f2;
+  --color-surface: #ffffff;
+  --color-surface-2: #efede6;
+  --color-ink: #0e1a14;
+  --color-ink-muted: #56625a;
+  --color-accent: #0b6b4f;
+  --color-accent-deep: #084f3a;
+  --color-gold: #c8932b;
+  --color-line: #0e1a141a;
+  --color-line-strong: #0e1a1438;
+  --color-line-accent: #0b6b4f66;
 
-  --font-display: var(--font-display), serif;
+  --font-display: var(--font-display), sans-serif;
   --font-body: var(--font-body), sans-serif;
   --font-mono: var(--font-mono), monospace;
 }
@@ -28,9 +29,23 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
+h1,
+h2,
+h3 {
+  letter-spacing: -0.02em;
+}
+
 ::selection {
   background: var(--color-accent);
   color: var(--color-canvas);
+}
+
+/* Interim: the old italic-word headline trick becomes a green highlight
+   (Sora has no italic). Removed once the pages are rewritten. */
+.font-display .italic,
+.font-display.italic {
+  font-style: normal;
+  color: var(--color-accent);
 }
 
 @keyframes fade-up {
