@@ -46,9 +46,14 @@ export const caseStudies: CaseStudy[] = [
         label: "Public website",
       },
       {
-        src: "/screenshots/fpmi-programs.webp",
-        alt: "FPMI programs page organised by the institute's departments",
-        label: "Programs page",
+        src: "/screenshots/fpmi-apply.webp",
+        alt: "FPMI online application page with the registration fee payment step",
+        label: "Online application",
+      },
+      {
+        src: "/screenshots/fpmi-gallery.webp",
+        alt: "FPMI gallery page with photos filtered by department",
+        label: "Gallery",
       },
       {
         src: "/screenshots/fpmi-admin-dashboard.webp",
@@ -63,14 +68,35 @@ export const caseStudies: CaseStudy[] = [
     status: "In build",
     title: "Flash TV",
     oneLiner:
-      "A public website for a working Ghanaian TV station, with live streams, show schedules and an admin inbox.",
+      "A public website for a working Ghanaian TV station, with live viewing, a replay library and an advertiser enquiry flow.",
     problem:
-      "A live TV station needs a proper home online: somewhere viewers can see what is on and when, watch the live streams, and where advertisers and event organisers can reach the station directly instead of through scattered messages.",
+      "A live TV station needs a proper home online: somewhere viewers can see what is on, watch live and catch up on episodes they missed, and where advertisers and event organisers can reach the station directly instead of through scattered messages.",
     build:
-      "A public website for the station: pages for its programmes, such as Gospel Bulletin and Fancy Ladies Show, air times for shows that only broadcast on TV, like The Morning Show and ASEDA, and its YouTube live streams brought into one place. Contact, event and advertising forms save to the station's own Supabase project, separate from every other system we run, and land in an admin inbox built into the site. A news section lets the station publish trending stories, and a promo band links through to the Flash Prime Media Institute.",
+      "A public website for the station. A home page built around the live broadcast, show pages for its programmes such as Gospel Bulletin and Fancy Ladies Show, and a replay library where every episode stays up after it airs, filterable by show. Event coverage and a blog carry the station's stories. An advertise page lays out the three ways to reach viewers, live show ad slots, squeezebacks and crawlers, with a quote request form. Contact, event and advertising submissions save to the station's own Supabase project, separate from every other system we run, and land in an admin inbox built into the site. A promo band links through to the Flash Prime Media Institute.",
     proof:
-      "Built for an operating station, not a showcase: real programmes, a real schedule and real submissions from viewers, advertisers and event organisers.",
-    screenshots: [],
+      "Built for an operating station, not a showcase: real programmes, real episodes added after each broadcast, and forms that feed straight into the station's own inbox.",
+    screenshots: [
+      {
+        src: "/screenshots/flashtv-home.webp",
+        alt: "Flash TV home page with the live broadcast player",
+        label: "Home page",
+      },
+      {
+        src: "/screenshots/flashtv-shows.webp",
+        alt: "Flash TV shows page listing Gospel Bulletin and Fancy Ladies Show",
+        label: "Shows",
+      },
+      {
+        src: "/screenshots/flashtv-replays.webp",
+        alt: "Flash TV replay library with episodes filterable by show",
+        label: "Replay library",
+      },
+      {
+        src: "/screenshots/flashtv-advertise.webp",
+        alt: "Flash TV advertising page with three ad formats and a quote request form",
+        label: "Advertising",
+      },
+    ],
   },
   {
     slug: "lunchos",
